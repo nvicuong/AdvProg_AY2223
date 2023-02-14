@@ -163,7 +163,7 @@ bool isCorrectChar(char ch, const string& mask)
 ***/
 bool isWholeWord(const string& mask)
 {
-     bool answer;
+     bool answer = true;
     for (auto i : mask)
     {
         if (!((i >= 'a' && i <= 'z' ) || (i >= 'A' && i <= 'Z')))
