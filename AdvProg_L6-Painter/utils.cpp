@@ -53,16 +53,23 @@ void quitSDL(SDL_Window **window, SDL_Renderer **renderer)
 
 void waitUntilKeyPressed()
 {
+	// SDL_Event e;
+	// bool keyPressed = false;
+	// while (!keyPressed) {
+	// 	if (SDL_WaitEvent(&e) != 0) {
+	// 		if (e.type == SDL_KEYDOWN) {
+	// 			keyPressed = true;
+	// 		} else if (e.type == SDL_QUIT) {
+	// 			keyPressed = true;
+	// 		}
+	// 	}
+	// 	SDL_Delay(10000);
+	// }
 	SDL_Event e;
-	bool keyPressed = false;
-	while (!keyPressed) {
-		if (SDL_WaitEvent(&e) != 0) {
-			if (e.type == SDL_KEYDOWN) {
-				keyPressed = true;
-			} else if (e.type == SDL_QUIT) {
-				keyPressed = true;
-			}
-		}
-		SDL_Delay(10000);
-	}
+ while (true) {
+ if ( SDL_WaitEvent(&e) != 0 &&
+ (e.type == SDL_KEYDOWN || e.type == SDL_QUIT) )
+ return;
+ SDL_Delay(100);
+ }
 }
