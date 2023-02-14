@@ -150,7 +150,7 @@ bool isCorrectChar(char ch, const string& mask)
     s += ch;
     if (mask.find(s) <= mask.size())
         answer = true;
-    else answer - false;
+    else answer = false;
     return answer;
 }
 
