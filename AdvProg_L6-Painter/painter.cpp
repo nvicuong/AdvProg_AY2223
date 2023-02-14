@@ -11,6 +11,7 @@ void Painter::setColor(SDL_Color color)
     // TODO: set the color value for the Painter and set Render Draw Color
     this->color = color;
     SDL_SetRenderDrawColor( renderer, color.r, color.g, color.b, 0);
+    
 }
 
 
@@ -88,14 +89,14 @@ Part of code that not need to be implemented
 ***/
 void Painter::clearWithBgColor(SDL_Color bgColor)
 {
-    // SDL_Color curColor = color;
-    // setColor(bgColor);
-	// SDL_RenderClear(renderer);    
-    // setColor(curColor);
+    SDL_Color curColor = color;
+    setColor(bgColor);
+	SDL_RenderClear(renderer);    
+    setColor(curColor);
 
-    SDL_SetRenderDrawColor( renderer, bgColor.r, bgColor.g, bgColor.b, 0);
-    SDL_RenderClear(renderer);
-    SDL_SetRenderDrawColor( renderer, color.r, color.g, color.b, 0);
+    // SDL_SetRenderDrawColor( renderer, bgColor.r, bgColor.g, bgColor.b, 0);
+    // SDL_RenderClear(renderer);
+    // SDL_SetRenderDrawColor( renderer, color.r, color.g, color.b, 0);
 
 }
 
