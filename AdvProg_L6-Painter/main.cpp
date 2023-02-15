@@ -3,7 +3,7 @@
 
 //Mac
 #include <SDL2/SDL.h>
-//Windows
+// //Windows
 // #include <SDL.h>
 
 #include "painter.h"
