@@ -79,7 +79,7 @@ void Game::addCherry()
 		
         if (getCellType(randomPos) == CELL_EMPTY) {
 
-            cherryPosition =  randomPos;
+            setCherryPosition(randomPos);
             setCellType(randomPos, CELL_CHERRY);
 
        		break;
